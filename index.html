@@ -14,7 +14,15 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="canonical" href="https://biosymphony.github.io/">
-    <link rel="preload" href="assets/hero-workbench.webp" as="image" fetchpriority="high">
+    <link
+      rel="preload"
+      href="assets/hero-workbench.webp"
+      as="image"
+      type="image/webp"
+      imagesrcset="assets/hero-workbench-900.webp 900w, assets/hero-workbench.webp 1672w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body id="top">
@@ -25,192 +33,59 @@
         <span translate="no">BioSymphony</span>
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="#repos">Repos</a>
-        <a href="#pattern">Pattern</a>
-        <a href="#start">Start</a>
         <a href="https://github.com/BioSymphony">GitHub</a>
       </nav>
     </header>
 
     <main id="content" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="assets/hero-workbench.webp"
+          srcset="assets/hero-workbench-900.webp 900w, assets/hero-workbench.webp 1672w"
+          sizes="100vw"
+          alt=""
+          width="1672"
+          height="941"
+          fetchpriority="high"
+          decoding="async"
+        >
         <div class="hero-copy">
-          <p class="eyebrow">Open research tools</p>
           <h1 id="hero-title" translate="no">BioSymphony</h1>
           <p class="hero-lede">AI agent tools for biological research.</p>
-          <p class="hero-text">
-            We build open, readable tools that help scientists turn
-            biological questions into agent-guided workflows they can run
-            locally, review, and extend.
-          </p>
-          <div class="hero-actions" role="group" aria-label="Primary links">
-            <a class="button button-primary" href="https://github.com/BioSymphony">View GitHub</a>
-            <a class="button button-secondary" href="#repos">Browse repos</a>
-          </div>
         </div>
       </section>
 
-      <section class="intro-band" aria-label="BioSymphony summary">
-        <div class="intro-grid">
-          <p>
-            Each public repo gives a coding agent a defined place to start:
-            instructions, examples, templates, and starter commands for a specific
-            biological workflow.
-          </p>
-          <p>
-            The scientist stays close to the work: setting goals, choosing
-            data sources, approving compute, and deciding what is useful.
-          </p>
-        </div>
-      </section>
+      <section class="banner-stack" aria-label="BioSymphony repositories">
+        <a class="repo-banner banner-bioprospector" href="https://github.com/BioSymphony/biosymphony-bioprospector" aria-label="Open BioProspector on GitHub">
+          <img src="assets/banners/bioprospector.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
+          <span class="banner-label">Biosynthetic routes</span>
+          <h2>BioProspector</h2>
+        </a>
 
-      <section class="repo-section" id="repos" aria-labelledby="repos-title">
-        <div class="repo-section-heading">
-          <p class="eyebrow">Public repositories</p>
-          <h2 id="repos-title">Repos for focused biological work.</h2>
-          <p>
-            Six public repositories cover the scientific workflows, this site,
-            and the organization profile. Each gives a coding agent a clear
-            place to begin and a local path a scientist can review.
-          </p>
-        </div>
+        <a class="repo-banner banner-genecluster" href="https://github.com/BioSymphony/biosymphony-genecluster" aria-label="Open GeneCluster on GitHub">
+          <img src="assets/banners/genecluster.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
+          <span class="banner-label">Genome mining</span>
+          <h2>GeneCluster</h2>
+        </a>
 
-        <div class="repo-list">
-          <article class="repo-entry">
-            <a class="repo-media" href="https://github.com/BioSymphony/biosymphony-bioprospector" aria-label="Open BioProspector on GitHub">
-              <img src="assets/repos/bioprospector.webp" alt="" width="1400" height="820" loading="lazy" decoding="async">
-            </a>
-            <div class="repo-copy">
-              <p class="repo-kicker">Biosynthetic routes</p>
-              <h3>BioProspector</h3>
-              <p>
-                Explore target molecules, enzyme candidates, pathway ideas,
-                and follow-up searches.
-              </p>
-              <a href="https://github.com/BioSymphony/biosymphony-bioprospector">Open repo</a>
-            </div>
-          </article>
+        <a class="repo-banner banner-ferm-doe" href="https://github.com/BioSymphony/biosymphony-ferm-doe" aria-label="Open Ferm DoE on GitHub">
+          <img src="assets/banners/ferm-doe.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
+          <span class="banner-label">Fermentation design</span>
+          <h2>Ferm DoE</h2>
+        </a>
 
-          <article class="repo-entry">
-            <a class="repo-media" href="https://github.com/BioSymphony/biosymphony-genecluster" aria-label="Open GeneCluster on GitHub">
-              <img src="assets/repos/genecluster.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
-            </a>
-            <div class="repo-copy">
-              <p class="repo-kicker">Genome mining</p>
-              <h3>GeneCluster</h3>
-              <p>
-                Search public genomes and transcriptomes for natural-product
-                pathways, candidate genes, and related clusters.
-              </p>
-              <a href="https://github.com/BioSymphony/biosymphony-genecluster">Open repo</a>
-            </div>
-          </article>
+        <a class="repo-banner banner-cryocore" href="https://github.com/BioSymphony/biosymphony-cryocore-public" aria-label="Open CryoCore on GitHub">
+          <img src="assets/banners/cryocore.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
+          <span class="banner-label">Structural biology</span>
+          <h2>CryoCore</h2>
+        </a>
 
-          <article class="repo-entry">
-            <a class="repo-media" href="https://github.com/BioSymphony/biosymphony-ferm-doe" aria-label="Open Ferm DoE on GitHub">
-              <img src="assets/repos/ferm-doe.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
-            </a>
-            <div class="repo-copy">
-              <p class="repo-kicker">Fermentation design</p>
-              <h3>Ferm DoE</h3>
-              <p>
-                Prepare design families, scale context, and run packets for
-                biomanufacturing experiments.
-              </p>
-              <a href="https://github.com/BioSymphony/biosymphony-ferm-doe">Open repo</a>
-            </div>
-          </article>
-
-          <article class="repo-entry">
-            <a class="repo-media" href="https://github.com/BioSymphony/biosymphony-cryocore-public" aria-label="Open CryoCore on GitHub">
-              <img src="assets/repos/cryocore.webp" alt="" width="1400" height="788" loading="lazy" decoding="async">
-            </a>
-            <div class="repo-copy">
-              <p class="repo-kicker">Structural biology</p>
-              <h3>CryoCore</h3>
-              <p>
-                Work through cryo-EM maps, models, figure planning, state
-                comparison, and compute preparation.
-              </p>
-              <a href="https://github.com/BioSymphony/biosymphony-cryocore-public">Open repo</a>
-            </div>
-          </article>
-
-          <article class="repo-entry">
-            <a class="repo-media" href="https://github.com/BioSymphony/BioSymphony.github.io" aria-label="Open BioSymphony.github.io on GitHub">
-              <img src="assets/repos/site.webp" alt="" width="1400" height="802" loading="lazy" decoding="async">
-            </a>
-            <div class="repo-copy">
-              <p class="repo-kicker">Public website</p>
-              <h3 class="repo-title-code">BioSymphony.<wbr>github.io</h3>
-              <p>
-                Keep the public site small, readable, and connected to the
-                repositories it introduces.
-              </p>
-              <a href="https://github.com/BioSymphony/BioSymphony.github.io">Open repo</a>
-            </div>
-          </article>
-
-          <article class="repo-entry">
-            <a class="repo-media" href="https://github.com/BioSymphony/.github" aria-label="Open the BioSymphony organization profile repo on GitHub">
-              <img src="assets/repos/profile.webp" alt="" width="1400" height="805" loading="lazy" decoding="async">
-            </a>
-            <div class="repo-copy">
-              <p class="repo-kicker">Organization profile</p>
-              <h3>.github</h3>
-              <p>
-                Maintain the organization profile, shared entry points, and
-                public-facing repo index.
-              </p>
-              <a href="https://github.com/BioSymphony/.github">Open repo</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section pattern-section" id="pattern" aria-labelledby="pattern-title">
-        <div class="section-heading narrow">
-          <p class="eyebrow">Shared pattern</p>
-          <h2 id="pattern-title">Start local, then expand with care.</h2>
-        </div>
-
-        <div class="pattern-grid">
-          <div>
-            <span class="number">01</span>
-            <h3>Start local.</h3>
-            <p>Run the first demo and keep the initial scope small enough to inspect.</p>
-          </div>
-          <div>
-            <span class="number">02</span>
-            <h3>Give the agent clear instructions.</h3>
-            <p>Each repo carries instructions, examples, templates, and commands the agent can follow.</p>
-          </div>
-          <div>
-            <span class="number">03</span>
-            <h3>Keep data where it belongs.</h3>
-            <p>Public examples stay public; private data and larger artifacts stay in operator-owned storage.</p>
-          </div>
-          <div>
-            <span class="number">04</span>
-            <h3>Expand when the path is clear.</h3>
-            <p>Move to cloud, HPC, or GPU resources after the local path is clear enough to support the next step.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section start-section" id="start" aria-labelledby="start-title">
-        <div class="start-panel">
-          <div>
-            <p class="eyebrow">How to begin</p>
-            <h2 id="start-title">Choose one repo and run its first demo.</h2>
-          </div>
-          <ol>
-            <li>Choose the repo closest to your research question.</li>
-            <li>Read the repo <code>README.md</code> and <code>AGENTS.md</code>.</li>
-            <li>Open the repo in your coding agent and ask it to run the local demo.</li>
-          </ol>
-          <a class="button button-primary" href="https://github.com/BioSymphony">Browse repositories</a>
-        </div>
+        <a class="repo-banner banner-org" href="https://github.com/BioSymphony" aria-label="Open BioSymphony on GitHub">
+          <img src="assets/banners/github-org.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
+          <span class="banner-label">GitHub organization</span>
+          <h2 translate="no">BioSymphony</h2>
+        </a>
       </section>
     </main>
 
