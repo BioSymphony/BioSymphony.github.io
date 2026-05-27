@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BioSymphony</title>
+    <meta name="description" content="Open tools for AI-assisted biological research.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="BioSymphony home">
+        <span class="brand-mark" aria-hidden="true">B</span>
+        <span>BioSymphony</span>
+      </a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="#toolkits">Toolkits</a>
+        <a href="#pattern">Pattern</a>
+        <a href="#start">Start</a>
+        <a href="https://github.com/BioSymphony">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Open research tools</p>
+          <h1 id="hero-title">BioSymphony</h1>
+          <p class="hero-lede">AI agent tools for biological research.</p>
+          <p class="hero-text">
+            We build small, readable repositories that help scientists turn
+            biological questions into local workflows an agent can run, explain,
+            and hand back for human judgment.
+          </p>
+          <div class="hero-actions" aria-label="Primary links">
+            <a class="button button-primary" href="https://github.com/BioSymphony">View GitHub</a>
+            <a class="button button-secondary" href="#toolkits">Choose a toolkit</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" aria-label="BioSymphony summary">
+        <div class="intro-grid">
+          <p>
+            Each toolkit gives a coding agent explicit instructions, examples,
+            and local checks for a specific biological workflow.
+          </p>
+          <p>
+            The scientist stays close to the work: setting goals, choosing
+            data sources, approving compute, and deciding what is useful.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="toolkits" aria-labelledby="toolkits-title">
+        <div class="section-heading">
+          <p class="eyebrow">Public repositories</p>
+          <h2 id="toolkits-title">Pick the work in front of you.</h2>
+        </div>
+
+        <div class="toolkit-grid">
+          <article class="toolkit-card card-green">
+            <div>
+              <p class="card-kicker">Biosynthetic routes</p>
+              <h3>BioProspector</h3>
+              <p>
+                Explore routes to target molecules, find enzyme and gene
+                candidates, and turn pathway ideas into follow-up work.
+              </p>
+            </div>
+            <a href="https://github.com/BioSymphony/biosymphony-bioprospector">Open repo</a>
+          </article>
+
+          <article class="toolkit-card card-blue">
+            <div>
+              <p class="card-kicker">Genome mining</p>
+              <h3>GeneCluster</h3>
+              <p>
+                Search public genomes and transcriptomes for natural-product
+                pathways, candidate genes, and related clusters.
+              </p>
+            </div>
+            <a href="https://github.com/BioSymphony/biosymphony-genecluster">Open repo</a>
+          </article>
+
+          <article class="toolkit-card card-gold">
+            <div>
+              <p class="card-kicker">Experiment design</p>
+              <h3>Ferm DoE</h3>
+              <p>
+                Plan fermentation and biomanufacturing experiments, choose
+                useful design families, and prepare run packets.
+              </p>
+            </div>
+            <a href="https://github.com/BioSymphony/biosymphony-ferm-doe">Open repo</a>
+          </article>
+
+          <article class="toolkit-card card-graphite">
+            <div>
+              <p class="card-kicker">Structural biology</p>
+              <h3>CryoCore</h3>
+              <p>
+                Work through cryo-EM maps, models, figure planning, state
+                comparison, and compute preparation.
+              </p>
+            </div>
+            <a href="https://github.com/BioSymphony/biosymphony-cryocore-public">Open repo</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section pattern-section" id="pattern" aria-labelledby="pattern-title">
+        <div class="section-heading narrow">
+          <p class="eyebrow">Shared pattern</p>
+          <h2 id="pattern-title">Make agent work concrete enough to inspect.</h2>
+        </div>
+
+        <div class="pattern-grid">
+          <div>
+            <span class="number">01</span>
+            <h3>Start local.</h3>
+            <p>Run the first demo and the smallest useful checks before growing the workflow.</p>
+          </div>
+          <div>
+            <span class="number">02</span>
+            <h3>Give the agent a real surface.</h3>
+            <p>Each repo carries instructions, examples, templates, and commands the agent can follow.</p>
+          </div>
+          <div>
+            <span class="number">03</span>
+            <h3>Keep data where it belongs.</h3>
+            <p>Public examples stay public; private data and larger artifacts stay in operator-owned storage.</p>
+          </div>
+          <div>
+            <span class="number">04</span>
+            <h3>Grow only when useful.</h3>
+            <p>Move to cloud, HPC, or GPU resources after the local path is clear enough to justify it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section start-section" id="start" aria-labelledby="start-title">
+        <div class="start-panel">
+          <div>
+            <p class="eyebrow">How to begin</p>
+            <h2 id="start-title">Choose one repo and run its first demo.</h2>
+          </div>
+          <ol>
+            <li>Pick the toolkit closest to your research question.</li>
+            <li>Read the repo <code>README.md</code> and <code>AGENTS.md</code>.</li>
+            <li>Open the repo in your coding agent and ask for the local demo.</li>
+          </ol>
+          <a class="button button-primary" href="https://github.com/BioSymphony">Browse repositories</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>BioSymphony</p>
+      <a href="https://github.com/BioSymphony">github.com/BioSymphony</a>
+    </footer>
+  </body>
+</html>
