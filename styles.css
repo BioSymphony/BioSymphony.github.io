@@ -229,6 +229,10 @@ h1 {
   object-position: center center;
 }
 
+.banner-structure-factory img {
+  object-position: center center;
+}
+
 .banner-genecluster img {
   object-position: center center;
 }
@@ -306,6 +310,10 @@ h1 {
 
   .banner-bioprospector img {
     object-position: 54% center;
+  }
+
+  .banner-structure-factory img {
+    object-position: 48% center;
   }
 
   .banner-genecluster img {
