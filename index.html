@@ -1,18 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BioSymphony</title>
-    <meta name="description" content="Open tools for AI-assisted biological research.">
+    <meta name="description" content="AI agent tools for biological research.">
+    <meta name="theme-color" content="#151816">
+    <meta property="og:title" content="BioSymphony">
+    <meta property="og:description" content="AI agent tools for biological research.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://biosymphony.github.io/">
+    <meta property="og:image" content="https://biosymphony.github.io/assets/hero-workbench.webp">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="canonical" href="https://biosymphony.github.io/">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header" aria-label="Primary">
       <a class="brand" href="#top" aria-label="BioSymphony home">
         <span class="brand-mark" aria-hidden="true">B</span>
-        <span>BioSymphony</span>
+        <span translate="no">BioSymphony</span>
       </a>
       <nav class="site-nav" aria-label="Site">
         <a href="#toolkits">Toolkits</a>
@@ -22,18 +31,18 @@
       </nav>
     </header>
 
-    <main id="top">
+    <main id="content" tabindex="-1">
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-copy">
           <p class="eyebrow">Open research tools</p>
-          <h1 id="hero-title">BioSymphony</h1>
+          <h1 id="hero-title" translate="no">BioSymphony</h1>
           <p class="hero-lede">AI agent tools for biological research.</p>
           <p class="hero-text">
             We build small, readable repositories that help scientists turn
             biological questions into local workflows an agent can run, explain,
-            and hand back for human judgment.
+            and hand back in a form scientists can read and improve.
           </p>
-          <div class="hero-actions" aria-label="Primary links">
+          <div class="hero-actions" role="group" aria-label="Primary links">
             <a class="button button-primary" href="https://github.com/BioSymphony">View GitHub</a>
             <a class="button button-secondary" href="#toolkits">Choose a toolkit</a>
           </div>
@@ -113,7 +122,7 @@
       <section class="section pattern-section" id="pattern" aria-labelledby="pattern-title">
         <div class="section-heading narrow">
           <p class="eyebrow">Shared pattern</p>
-          <h2 id="pattern-title">Make agent work concrete enough to inspect.</h2>
+          <h2 id="pattern-title">Make agent work easy to follow.</h2>
         </div>
 
         <div class="pattern-grid">
@@ -124,7 +133,7 @@
           </div>
           <div>
             <span class="number">02</span>
-            <h3>Give the agent a real surface.</h3>
+            <h3>Give the agent clear instructions.</h3>
             <p>Each repo carries instructions, examples, templates, and commands the agent can follow.</p>
           </div>
           <div>
@@ -157,7 +166,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>BioSymphony</p>
+      <p translate="no">BioSymphony</p>
       <a href="https://github.com/BioSymphony">github.com/BioSymphony</a>
     </footer>
   </body>

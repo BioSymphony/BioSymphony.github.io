@@ -6,7 +6,7 @@
   --line: #d8ddd5;
   --green: #2e6f4e;
   --blue: #285b7d;
-  --gold: #9b742b;
+  --gold: #74541f;
   --graphite: #313532;
   --white: #ffffff;
 }
@@ -26,10 +26,35 @@ body {
   font-family: "Aptos", "Helvetica Neue", ui-sans-serif, system-ui, sans-serif;
   line-height: 1.55;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: rgba(46, 111, 78, 0.22);
 }
 
 a {
   color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #b8d6bd;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 40;
+  top: 12px;
+  left: 12px;
+  padding: 10px 14px;
+  color: var(--ink);
+  background: var(--white);
+  border-radius: 6px;
+  font-weight: 800;
+  text-decoration: none;
+  transform: translateY(-140%);
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
 }
 
 .site-header {
@@ -42,11 +67,12 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 18px clamp(20px, 5vw, 72px);
+  padding: 18px max(clamp(20px, 5vw, 72px), env(safe-area-inset-right)) 18px max(clamp(20px, 5vw, 72px), env(safe-area-inset-left));
   color: var(--white);
   background: rgba(21, 24, 22, 0.54);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .brand,
@@ -90,7 +116,7 @@ a {
   min-height: 86svh;
   display: flex;
   align-items: flex-end;
-  padding: 132px clamp(20px, 7vw, 96px) 72px;
+  padding: 132px max(clamp(20px, 7vw, 96px), env(safe-area-inset-right)) 72px max(clamp(20px, 7vw, 96px), env(safe-area-inset-left));
   color: var(--white);
   background:
     linear-gradient(90deg, rgba(13, 18, 15, 0.9) 0%, rgba(13, 18, 15, 0.68) 42%, rgba(13, 18, 15, 0.18) 100%),
@@ -139,6 +165,7 @@ h2 {
   margin-bottom: 0;
   font-size: 3.2rem;
   font-weight: 700;
+  text-wrap: balance;
 }
 
 h3 {
@@ -177,6 +204,8 @@ h3 {
   border-radius: 6px;
   font-weight: 750;
   text-decoration: none;
+  touch-action: manipulation;
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
 
 .button-primary {
@@ -216,6 +245,12 @@ h3 {
 
 .section {
   padding: 82px clamp(20px, 7vw, 96px);
+}
+
+#toolkits,
+#pattern,
+#start {
+  scroll-margin-top: 84px;
 }
 
 .section-heading {
@@ -368,7 +403,7 @@ h3 {
   .site-header {
     position: absolute;
     align-items: flex-start;
-    padding: 16px 18px;
+    padding: 16px max(18px, env(safe-area-inset-right)) 16px max(18px, env(safe-area-inset-left));
   }
 
   .site-nav {
@@ -377,7 +412,7 @@ h3 {
 
   .hero {
     min-height: 80svh;
-    padding: 118px 20px 48px;
+    padding: 118px max(20px, env(safe-area-inset-right)) 48px max(20px, env(safe-area-inset-left));
     background:
       linear-gradient(180deg, rgba(13, 18, 15, 0.82) 0%, rgba(13, 18, 15, 0.74) 62%, rgba(13, 18, 15, 0.58) 100%),
       url("assets/hero-workbench.webp") center / cover no-repeat;
@@ -416,5 +451,20 @@ h3 {
 
   .site-footer {
     flex-direction: column;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .skip-link {
+    transition: none;
+  }
+
+  .button:hover {
+    transform: none;
   }
 }
