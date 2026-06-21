@@ -233,6 +233,16 @@ h1 {
   object-position: center center;
 }
 
+.banner-small-molecules::after {
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.42) 42%, rgba(0, 0, 0, 0.08) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.02) 62%);
+}
+
+.banner-small-molecules img {
+  object-position: center center;
+}
+
 .banner-genecluster img {
   object-position: center center;
 }
@@ -314,6 +324,10 @@ h1 {
 
   .banner-structure-factory img {
     object-position: 48% center;
+  }
+
+  .banner-small-molecules img {
+    object-position: 58% center;
   }
 
   .banner-genecluster img {
