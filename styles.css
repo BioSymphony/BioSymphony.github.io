@@ -50,6 +50,18 @@ a:focus-visible {
   transform: translateY(0);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .site-header {
   position: fixed;
   z-index: 20;
@@ -121,7 +133,7 @@ a:focus-visible {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(90deg, rgba(5, 8, 6, 0.88) 0%, rgba(5, 8, 6, 0.58) 45%, rgba(5, 8, 6, 0.14) 100%);
+  background: linear-gradient(180deg, rgba(5, 8, 6, 0.5) 0%, rgba(5, 8, 6, 0.08) 30%, rgba(5, 8, 6, 0.18) 72%, rgba(5, 8, 6, 0.42) 100%);
 }
 
 .hero-image {
@@ -202,12 +214,18 @@ h1 {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.34) 42%, rgba(0, 0, 0, 0.07) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0.02) 58%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.36) 0%, rgba(0, 0, 0, 0.14) 42%, rgba(0, 0, 0, 0.03) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.01) 58%);
+  opacity: 1;
+  transition: opacity 320ms ease;
 }
 
 .repo-banner:hover img {
   transform: scale(1.025);
+}
+
+.repo-banner:hover::after {
+  opacity: 0.58;
 }
 
 .banner-label {
@@ -218,6 +236,11 @@ h1 {
   font-size: clamp(0.78rem, 1.1vw, 0.95rem);
   font-weight: 850;
   text-transform: uppercase;
+}
+
+.repo-banner .banner-label,
+.repo-banner h2 {
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.58);
 }
 
 .repo-banner h2 {
@@ -241,8 +264,8 @@ h1 {
 
 .banner-small-molecules::after {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.42) 42%, rgba(0, 0, 0, 0.08) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.02) 62%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.18) 42%, rgba(0, 0, 0, 0.03) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.01) 62%);
 }
 
 .banner-small-molecules img {
@@ -255,8 +278,8 @@ h1 {
 
 .banner-ferm-doe::after {
   background:
-    linear-gradient(90deg, rgba(1, 26, 24, 0.62) 0%, rgba(1, 26, 24, 0.3) 42%, rgba(1, 26, 24, 0.04) 100%),
-    linear-gradient(0deg, rgba(1, 26, 24, 0.2) 0%, rgba(1, 26, 24, 0.01) 58%);
+    linear-gradient(90deg, rgba(1, 26, 24, 0.34) 0%, rgba(1, 26, 24, 0.12) 42%, rgba(1, 26, 24, 0.02) 100%),
+    linear-gradient(0deg, rgba(1, 26, 24, 0.1) 0%, rgba(1, 26, 24, 0.01) 58%);
 }
 
 .banner-ferm-doe img {
@@ -269,8 +292,8 @@ h1 {
 
 .banner-org::after {
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.2) 46%, rgba(0, 0, 0, 0.04) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.02) 62%);
+    linear-gradient(90deg, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.1) 46%, rgba(0, 0, 0, 0.02) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.01) 62%);
 }
 
 .banner-org img {
@@ -391,12 +414,12 @@ h1 {
   }
 
   .hero {
-    min-height: 84svh;
-    padding: 118px max(20px, env(safe-area-inset-right)) 54px max(20px, env(safe-area-inset-left));
+    min-height: clamp(300px, 94vw, 390px);
+    padding: 0;
   }
 
   .hero::after {
-    background: linear-gradient(180deg, rgba(5, 8, 6, 0.78) 0%, rgba(5, 8, 6, 0.66) 62%, rgba(5, 8, 6, 0.52) 100%);
+    background: linear-gradient(180deg, rgba(5, 8, 6, 0.54) 0%, rgba(5, 8, 6, 0.08) 34%, rgba(5, 8, 6, 0.22) 78%, rgba(5, 8, 6, 0.5) 100%);
   }
 
   .banner-stack {
@@ -484,6 +507,7 @@ h1 {
   }
 
   .skip-link,
+  .repo-banner::after,
   .repo-banner img,
   .related-card {
     transition: none;
