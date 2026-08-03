@@ -403,6 +403,15 @@ h1 {
   text-decoration: none;
 }
 
+/* Grouped so the footer stays name-left / links-right. As three flex children,
+   space-between would put the first link in the middle. */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 18px;
+}
+
 @media (max-width: 720px) {
   .site-header {
     position: absolute;

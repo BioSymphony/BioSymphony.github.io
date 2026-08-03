@@ -1,0 +1,15 @@
+# GitHub Pages serves this repository from the root of main, so anything
+# committed here is public once pushed. The entries below are working files that
+# should stay local.
+
+# Playwright screenshots from layout and hover review.
+/output/
+
+# Banner exploration. Production art in this folder is .webp and stays tracked
+# (bioprospector, cryocore, ferm-doe, genecluster, github-org, small-molecules,
+# structure-factory). The .png drafts and the org-intro contact sheets are
+# candidates that were not chosen and do not ship.
+/assets/banners/*.png
+/assets/banners/org-intro/
+
+.DS_Store

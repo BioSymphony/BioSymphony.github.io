@@ -13,6 +13,7 @@
     <meta property="og:image" content="https://biosymphony.github.io/assets/hero-biosymphony.webp">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="canonical" href="https://biosymphony.github.io/">
     <link
       rel="preload"
@@ -24,6 +25,52 @@
       fetchpriority="high"
     >
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Structured data — Organization + WebSite. The h1 is visually hidden and
+         the banners carry no alt text, so the page has little machine-readable
+         prose. This block supplies the facts instead. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://biosymphony.github.io/#organization",
+          "name": "BioSymphony",
+          "url": "https://biosymphony.github.io/",
+          "logo": "https://biosymphony.github.io/assets/apple-touch-icon.png",
+          "image": "https://biosymphony.github.io/assets/hero-biosymphony.webp",
+          "description": "Toolkits for AI coding agents working in biology: structural design, small-molecule design, genome mining, biosynthesis, cryo-EM, and fermentation.",
+          "knowsAbout": [
+            "Structural biology",
+            "Structural design",
+            "Small-molecule design",
+            "Genome mining",
+            "Biosynthetic routes",
+            "Fermentation design",
+            "AI agents"
+          ],
+          "founder": {
+            "@type": "Person",
+            "name": "Jacob Vogan",
+            "url": "https://jvogan.github.io/"
+          },
+          "sameAs": [
+            "https://github.com/BioSymphony"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://biosymphony.github.io/#website",
+          "url": "https://biosymphony.github.io/",
+          "name": "BioSymphony",
+          "description": "AI agent tools for biological research.",
+          "inLanguage": "en",
+          "publisher": { "@id": "https://biosymphony.github.io/#organization" }
+        }
+      ]
+    }
+    </script>
   </head>
   <body id="top">
     <a class="skip-link" href="#content">Skip to content</a>
@@ -134,7 +181,10 @@
 
     <footer class="site-footer">
       <p translate="no">BioSymphony</p>
-      <a href="https://github.com/BioSymphony">github.com/BioSymphony</a>
+      <span class="footer-links">
+        <a href="https://github.com/BioSymphony">github.com/BioSymphony</a>
+        <a href="https://jvogan.github.io/">jvogan.github.io</a>
+      </span>
     </footer>
   </body>
 </html>
