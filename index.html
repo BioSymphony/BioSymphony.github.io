@@ -10,8 +10,18 @@
     <meta property="og:description" content="AI agent tools for biological research.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://biosymphony.github.io/">
-    <meta property="og:image" content="https://biosymphony.github.io/assets/hero-biosymphony.webp">
+    <!-- JPEG rather than the WebP the page itself renders: the social scrapers
+         are the one audience that still cannot be relied on to decode WebP. -->
+    <meta property="og:image" content="https://biosymphony.github.io/assets/og-biosymphony.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="675">
+    <meta property="og:image:alt" content="The word BioSymphony in white, centred inside a ring of red and blue nebula filaments on a black starfield, above the line “AI Agent Skills For Biological Research”.">
+    <meta property="og:site_name" content="BioSymphony">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://biosymphony.github.io/assets/og-biosymphony.jpg">
+    <meta name="twitter:image:alt" content="The word BioSymphony in white, centred inside a ring of red and blue nebula filaments on a black starfield, above the line “AI Agent Skills For Biological Research”.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="canonical" href="https://biosymphony.github.io/">
@@ -39,7 +49,7 @@
           "name": "BioSymphony",
           "url": "https://biosymphony.github.io/",
           "logo": "https://biosymphony.github.io/assets/apple-touch-icon.png",
-          "image": "https://biosymphony.github.io/assets/hero-biosymphony.webp",
+          "image": "https://biosymphony.github.io/assets/og-biosymphony.jpg",
           "description": "Toolkits for AI coding agents working in biology: structural design, small-molecule design, genome mining, biosynthesis, cryo-EM, and fermentation.",
           "knowsAbout": [
             "Structural biology",
@@ -50,11 +60,7 @@
             "Fermentation design",
             "AI agents"
           ],
-          "founder": {
-            "@type": "Person",
-            "name": "Jacob Vogan",
-            "url": "https://jvogan.github.io/"
-          },
+          "founder": { "@id": "https://jvogan.github.io/#person" },
           "sameAs": [
             "https://github.com/BioSymphony"
           ]
@@ -67,6 +73,31 @@
           "description": "AI agent tools for biological research.",
           "inLanguage": "en",
           "publisher": { "@id": "https://biosymphony.github.io/#organization" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://jvogan.github.io/#person",
+          "name": "Jacob Vogan",
+          "alternateName": "jvogan",
+          "url": "https://jvogan.github.io/",
+          "image": "https://github.com/jvogan.png?size=480",
+          "description": "Builds AI tools for biological research — agentic systems for bioinformatics, structural biology, biomanufacturing, and automated labs.",
+          "knowsAbout": [
+            "Bioinformatics",
+            "Structural biology",
+            "Biomanufacturing",
+            "Automated laboratory systems",
+            "AI agents",
+            "Agent orchestration",
+            "Local speech (TTS, ASR)",
+            "Long-horizon agentic workflows"
+          ],
+          "sameAs": [
+            "https://github.com/jvogan",
+            "https://huggingface.co/JacobMolBio",
+            "https://x.com/jacobmolbio",
+            "https://houseofvogan.com/"
+          ]
         }
       ]
     }
