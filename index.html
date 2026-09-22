@@ -27,18 +27,19 @@
     <link rel="canonical" href="https://biosymphony.github.io/">
     <link
       rel="preload"
-      href="assets/hero-biosymphony-900.webp"
+      href="assets/hero-plate-900.webp"
       as="image"
       type="image/webp"
-      imagesrcset="assets/hero-biosymphony-900.webp 900w, assets/hero-biosymphony.webp 1672w"
+      imagesrcset="assets/hero-plate-900.webp 900w, assets/hero-plate.webp 1672w"
       imagesizes="100vw"
       fetchpriority="high"
     >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap">
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Structured data — Organization + WebSite. The h1 is visually hidden and
-         the banners carry no alt text, so the page has little machine-readable
-         prose. This block supplies the facts instead. -->
+    <!-- Structured data — Organization + WebSite. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -107,11 +108,14 @@
     <a class="skip-link" href="#content">Skip to content</a>
     <header class="site-header" aria-label="Primary">
       <a class="brand" href="#top" aria-label="BioSymphony home">
-        <span class="brand-mark" aria-hidden="true">B</span>
+        <img class="brand-mark" src="assets/favicon.svg" alt="" width="28" height="28">
         <span translate="no">BioSymphony</span>
       </a>
       <nav class="site-nav" aria-label="Site">
-        <a href="https://github.com/BioSymphony">GitHub</a>
+        <a href="#toolkits">Toolkits</a>
+        <a href="#start">Get started</a>
+        <a href="#companions">Companions</a>
+        <a class="nav-github" href="https://github.com/BioSymphony">GitHub</a>
       </nav>
     </header>
 
@@ -119,8 +123,8 @@
       <section class="hero" aria-labelledby="hero-title">
         <img
           class="hero-image"
-          src="assets/hero-biosymphony-900.webp"
-          srcset="assets/hero-biosymphony-900.webp 900w, assets/hero-biosymphony.webp 1672w"
+          src="assets/hero-plate-900.webp"
+          srcset="assets/hero-plate-900.webp 900w, assets/hero-plate.webp 1672w"
           sizes="100vw"
           alt=""
           width="1672"
@@ -128,94 +132,156 @@
           fetchpriority="high"
           decoding="async"
         >
-        <div class="hero-copy visually-hidden">
+        <div class="hero-copy">
           <h1 id="hero-title" translate="no">BioSymphony</h1>
-          <p class="hero-lede">AI agent tools for biological research.</p>
+          <p class="hero-lede">Skills, tool references, and command-line tools that let coding agents do biological research.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#toolkits">Browse the toolkits</a>
+            <a class="button button-ghost" href="https://github.com/BioSymphony">github.com/BioSymphony</a>
+          </div>
         </div>
       </section>
 
-      <section class="banner-stack" aria-label="BioSymphony repositories">
-        <a class="repo-banner banner-bioprospector" href="https://github.com/BioSymphony/bioprospector" aria-label="Open BioProspector on GitHub">
-          <img src="assets/banners/bioprospector.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">Biosynthetic routes</span>
-          <h2>BioProspector</h2>
-        </a>
+      <section class="section toolkits" id="toolkits" aria-labelledby="toolkits-title">
+        <div class="section-head">
+          <p class="eyebrow">Six toolkits</p>
+          <h2 id="toolkits-title">Pick the toolkit that fits your question</h2>
+          <p class="section-intro">BioProspector starts with a target molecule and possible routes. GeneCluster starts with candidate genes and genome or transcriptome evidence. Structure Factory covers prediction and design; CryoCore covers experimental maps and model validation.</p>
+        </div>
 
-        <a class="repo-banner banner-structure-factory" href="https://github.com/BioSymphony/structure-factory" aria-label="Open Structure Factory on GitHub">
-          <img src="assets/banners/structure-factory.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">Structural design</span>
-          <h2>Structure Factory</h2>
-        </a>
+        <div class="toolkit-grid">
+          <a class="toolkit" href="https://github.com/BioSymphony/bioprospector">
+            <span class="toolkit-art"><img src="assets/banners/bioprospector.webp" alt="" width="1774" height="887" loading="lazy" decoding="async"></span>
+            <span class="toolkit-body">
+              <span class="toolkit-domain">Biosynthetic routes</span>
+              <h3>BioProspector</h3>
+              <span class="toolkit-use">Compare biosynthetic routes by evidence, gene count, host fit, and unresolved steps.</span>
+              <span class="toolkit-out"><b>Outputs</b> Route comparisons, ranked enzyme and gene candidates, follow-up plans.</span>
+            </span>
+          </a>
 
-        <a class="repo-banner banner-small-molecules" href="https://github.com/BioSymphony/small-molecules" aria-label="Open Small Molecules on GitHub">
-          <img src="assets/banners/small-molecules.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">Small-molecule design</span>
-          <h2>Small Molecules</h2>
-        </a>
+          <a class="toolkit" href="https://github.com/BioSymphony/genecluster">
+            <span class="toolkit-art"><img src="assets/banners/genecluster.webp" alt="" width="1774" height="887" loading="lazy" decoding="async"></span>
+            <span class="toolkit-body">
+              <span class="toolkit-domain">Genome mining</span>
+              <h3>GeneCluster</h3>
+              <span class="toolkit-use">Find candidate biosynthetic genes across species and compare their genomic neighborhoods.</span>
+              <span class="toolkit-out"><b>Outputs</b> Candidate-gene tables, genome-context comparisons, reports with sources and evidence gaps.</span>
+            </span>
+          </a>
 
-        <a class="repo-banner banner-genecluster" href="https://github.com/BioSymphony/genecluster" aria-label="Open GeneCluster on GitHub">
-          <img src="assets/banners/genecluster.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">Genome mining</span>
-          <h2>GeneCluster</h2>
-        </a>
+          <a class="toolkit" href="https://github.com/BioSymphony/structure-factory">
+            <span class="toolkit-art"><img src="assets/banners/structure-factory.webp" alt="" width="1774" height="887" loading="lazy" decoding="async"></span>
+            <span class="toolkit-body">
+              <span class="toolkit-domain">Structural design</span>
+              <h3>Structure Factory</h3>
+              <span class="toolkit-use">Plan binder design, structure prediction, and screening with comparable inputs and scoring across methods.</span>
+              <span class="toolkit-out"><b>Outputs</b> Validated stage plans, compute requirements, task packs, candidate-ranking schemas.</span>
+            </span>
+          </a>
 
-        <a class="repo-banner banner-ferm-doe" href="https://github.com/BioSymphony/ferm-doe" aria-label="Open Ferm DoE on GitHub">
-          <img src="assets/banners/ferm-doe.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">Fermentation design</span>
-          <h2>Ferm DoE</h2>
-        </a>
+          <a class="toolkit" href="https://github.com/BioSymphony/cryocore">
+            <span class="toolkit-art"><img src="assets/banners/cryocore.webp" alt="" width="1774" height="887" loading="lazy" decoding="async"></span>
+            <span class="toolkit-body">
+              <span class="toolkit-domain">Cryo-EM</span>
+              <h3>CryoCore</h3>
+              <span class="toolkit-use">Organize cryo-EM map and model validation, conformational-state comparison, and structural figures.</span>
+              <span class="toolkit-out"><b>Outputs</b> A local HTML review demo, validation plans, figure specifications.</span>
+            </span>
+          </a>
 
-        <a class="repo-banner banner-cryocore" href="https://github.com/BioSymphony/cryocore" aria-label="Open CryoCore on GitHub">
-          <img src="assets/banners/cryocore.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">Structural biology</span>
-          <h2>CryoCore</h2>
-        </a>
+          <a class="toolkit" href="https://github.com/BioSymphony/small-molecules">
+            <span class="toolkit-art"><img src="assets/banners/small-molecules.webp" alt="" width="1774" height="887" loading="lazy" decoding="async"></span>
+            <span class="toolkit-body">
+              <span class="toolkit-domain">Small-molecule design</span>
+              <h3>Small Molecules</h3>
+              <span class="toolkit-use">Choose methods for molecular generation, synthesis planning, docking, affinity estimation, and property prediction.</span>
+              <span class="toolkit-out"><b>Outputs</b> Tool comparisons, setup requirements, separate code, model, and data license records.</span>
+            </span>
+          </a>
 
-        <section class="related-repos" aria-labelledby="related-title">
-          <div class="related-copy">
-            <span class="banner-label">Related repos</span>
-            <h2 id="related-title">Companion tools</h2>
-            <p>Useful adjacent projects for cloud execution, protein-structure voice control, and structural biology agents.</p>
-          </div>
+          <a class="toolkit" href="https://github.com/BioSymphony/ferm-doe">
+            <span class="toolkit-art"><img src="assets/banners/ferm-doe.webp" alt="" width="1774" height="887" loading="lazy" decoding="async"></span>
+            <span class="toolkit-body">
+              <span class="toolkit-domain">Fermentation design</span>
+              <h3>Ferm DoE</h3>
+              <span class="toolkit-use">Generate fermentation experiment designs, analyze supplied results, and plan the next batch within declared constraints.</span>
+              <span class="toolkit-out"><b>Outputs</b> Design tables, measurement-readiness reports, follow-up batches, scale-transfer reviews.</span>
+            </span>
+          </a>
+        </div>
+      </section>
 
-          <div class="related-grid">
-            <a class="related-card" href="https://github.com/jvogan/symphony-neocloud-bridge" aria-label="Open Symphony NeoCloud on GitHub">
-              <span class="related-kicker">Agent infrastructure</span>
-              <h3>Symphony NeoCloud</h3>
-              <p>Run agent workflows on cloud compute with preflight checks, cost caps, artifact receipts, and cleanup.</p>
-              <span class="related-link">GitHub</span>
-            </a>
+      <section class="section start" id="start" aria-labelledby="start-title">
+        <div class="start-copy">
+          <p class="eyebrow">Get started</p>
+          <h2 id="start-title">Open a toolkit in your agent</h2>
+          <ol class="steps">
+            <li><b>Clone one repo</b> and open it in Codex, Claude Code, or another coding agent.</li>
+            <li><b>Paste the first request.</b> The agent reads the toolkit's instructions and runs its local example.</li>
+            <li><b>Review the outputs</b>, evidence gaps, and dependencies before configuring larger runs.</li>
+          </ol>
+          <p class="start-note">You set the research question and interpret the evidence. Planning outputs and computational rankings need experimental validation before they support biological claims.</p>
+        </div>
 
-            <a class="related-card" href="https://github.com/jvogan/biovoice" aria-label="Open BioVoice on GitHub">
-              <span class="related-kicker">BioTools</span>
-              <h3>BioVoice</h3>
-              <p>Voice control for PyMOL, ChimeraX, AlphaFold, and Rosetta on the OpenAI Realtime API.</p>
-              <span class="related-link">GitHub</span>
-            </a>
+        <figure class="prompt-card">
+          <figcaption>
+            <span>First request</span>
+            <button class="copy-button" type="button" data-copy-target="first-request">Copy</button>
+          </figcaption>
+          <pre id="first-request">Read this toolkit's README and agent instructions. Use its local example or worked reference to show what it produces. Keep this first pass local. Explain the output files, evidence gaps, and dependencies for my question.</pre>
+        </figure>
+      </section>
 
-            <a class="related-card" href="https://github.com/jvogan/proteus" aria-label="Open Proteus on GitHub">
-              <span class="related-kicker">BioTools</span>
-              <h3>Proteus</h3>
-              <p>Structural biology automation for AI coding agents across PyMOL, ChimeraX, AlphaFold, PDB, UniProt, and Rosetta.</p>
-              <span class="related-link">GitHub</span>
-            </a>
-          </div>
-        </section>
+      <section class="section companions" id="companions" aria-labelledby="companions-title">
+        <div class="section-head">
+          <p class="eyebrow">Companion tools</p>
+          <h2 id="companions-title">Adjacent projects</h2>
+        </div>
 
-        <a class="repo-banner banner-org" href="https://github.com/BioSymphony" aria-label="Open BioSymphony on GitHub">
-          <img src="assets/banners/github-org.webp" alt="" width="1774" height="887" loading="lazy" decoding="async">
-          <span class="banner-label">GitHub organization</span>
-          <h2 translate="no">BioSymphony</h2>
-        </a>
+        <div class="companion-grid">
+          <a class="companion" href="https://github.com/jvogan/symphony-neocloud-bridge">
+            <span class="toolkit-domain">Agent infrastructure</span>
+            <h3>Symphony NeoCloud</h3>
+            <p>Run agent workflows on cloud compute with preflight checks, cost caps, artifact receipts, and cleanup.</p>
+          </a>
+
+          <a class="companion" href="https://github.com/jvogan/proteus">
+            <span class="toolkit-domain">Structural biology</span>
+            <h3>Proteus</h3>
+            <p>Structural biology automation for AI coding agents across PyMOL, ChimeraX, AlphaFold, PDB, UniProt, and Rosetta.</p>
+          </a>
+
+          <a class="companion" href="https://github.com/jvogan/biovoice">
+            <span class="toolkit-domain">Voice control</span>
+            <h3>BioVoice</h3>
+            <p>Voice control for PyMOL, ChimeraX, AlphaFold, and Rosetta on the OpenAI Realtime API.</p>
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p translate="no">BioSymphony</p>
+      <p><span translate="no">BioSymphony</span> · Agent toolkits for biological research</p>
       <span class="footer-links">
         <a href="https://github.com/BioSymphony">github.com/BioSymphony</a>
         <a href="https://jvogan.github.io/">jvogan.github.io</a>
       </span>
     </footer>
+
+    <script>
+      document.querySelectorAll("[data-copy-target]").forEach((button) => {
+        button.addEventListener("click", async () => {
+          const text = document.getElementById(button.dataset.copyTarget).textContent;
+          try {
+            await navigator.clipboard.writeText(text);
+            button.textContent = "Copied";
+          } catch {
+            button.textContent = "Select and copy";
+          }
+          setTimeout(() => { button.textContent = "Copy"; }, 1800);
+        });
+      });
+    </script>
   </body>
 </html>
